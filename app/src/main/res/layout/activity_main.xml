@@ -22,6 +22,18 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="Haz click aquí" />
+    <Button
+        android:id="@+id/btnFinalizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Finalizar" />
+    <Button
+        android:id="@+id/btnReiniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Resetear" />
 
 
 
