@@ -5,43 +5,13 @@
     android:layout_gravity="center_horizontal"
     android:gravity="center"
     android:orientation="vertical">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Contador de clics"
-        android:textColor="@color/blue"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
-
-    <Button
-        android:id="@+id/btnClick"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Haz click aquí" />
-    <Button
-        android:id="@+id/btnFinalizar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Finalizar" />
-    <Button
-        android:id="@+id/btnReiniciar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Resetear" />
-
-
-
     <TextView
         android:id="@+id/tvRespuesta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/red"
-        android:gravity="center" />
+        android:gravity="center"
+        android:text="Haz click y te saludo!!"
+        android:textColor="@color/gray"
+        android:textSize="20sp"/>
 
 </LinearLayout>

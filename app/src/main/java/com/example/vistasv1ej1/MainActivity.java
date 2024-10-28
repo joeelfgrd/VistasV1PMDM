@@ -5,12 +5,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity{
     TextView tvRespuesta;
-    Button btnClick;
-    Button btnFinalizar;
-    Button btnReiniciar;
-    int contador = 0;
+
 
 
 
@@ -21,30 +18,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         tvRespuesta = findViewById(R.id.tvRespuesta);
-        btnClick = findViewById(R.id.btnClick);
-        btnFinalizar = findViewById(R.id.btnFinalizar);
-        btnReiniciar = findViewById(R.id.btnReiniciar);
-
-        btnClick.setOnClickListener(this);
-        btnFinalizar.setOnClickListener(escuchadorFinalizar);
-        btnReiniciar.setOnClickListener(escuchadorReiniciar);
+        tvRespuesta.setOnClickListener(escuchadorRespuesta);
     }
 
-    @Override
-    public void onClick(View view) {
-        contador++;
-    }
 
-    private View.OnClickListener escuchadorFinalizar = new View.OnClickListener() {
+    private View.OnClickListener escuchadorRespuesta = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            tvRespuesta.setText(getResources().getString(R.string.has_pulsado) + contador + getResources().getString(R.string.veces));
-        }
-    };
-    private View.OnClickListener escuchadorReiniciar = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            contador = 0;
+            tvRespuesta.setRotation(45);
+            tvRespuesta.setText("HOLAAAAAAAAAA!!!");
+            tvRespuesta.setBackgroundColor(getResources().getColor(R.color.green));
         }
     };
 
