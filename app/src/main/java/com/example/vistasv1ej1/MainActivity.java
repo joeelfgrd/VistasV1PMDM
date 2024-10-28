@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity{
     private View.OnClickListener escuchadorRespuesta = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            tvRespuesta.setRotation(45);
+            float rotacion = tvRespuesta.getRotation();
+            tvRespuesta.setRotation(rotacion + 45);
             tvRespuesta.setText("HOLAAAAAAAAAA!!!");
             tvRespuesta.setBackgroundColor(getResources().getColor(R.color.green));
         }
