@@ -7,14 +7,13 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     RadioButton rbTexto;
     RadioButton rbImagen;
     Button btnAceptar;
     TextView tvSalidaPantalla;
     float rotacion = 0;
-
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -26,26 +25,27 @@ public class MainActivity extends AppCompatActivity{
         rbImagen = findViewById(R.id.rbImagen);
         btnAceptar = findViewById(R.id.btAceptar);
         tvSalidaPantalla = findViewById(R.id.tvSalidaPantalla);
+
         btnAceptar.setOnClickListener(escuchadorAceptar);
-
-
-
-
     }
-
-
-
 
     private View.OnClickListener escuchadorAceptar = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
             if (rbTexto.isChecked()) {
                 setContentView(R.layout.ventana_saludo);
-                TextView tvSaludo = findViewById(R.id.tvSalidaPantalla);
-                if (tvSaludo != null) {
+                tvSalidaPantalla = findViewById(R.id.tvSalidaPantalla);
+
+                if (tvSalidaPantalla != null) {
                     rotacion += 45;
-                    tvSaludo.setRotation(rotacion);
+                    tvSalidaPantalla.setRotation(rotacion);
+                    tvSalidaPantalla.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            rotacion += 45;
+                            tvSalidaPantalla.setRotation(rotacion);
+                        }
+                    });
                 }
             }
         }
