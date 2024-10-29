@@ -6,14 +6,10 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvSalidaPantalla"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/ivImagen"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="IMAGEN"
-        android:textColor="@color/gray"
-        android:background="@color/cyan"
-        android:textSize="30sp" />
+        android:src="@drawable/baseline_child_care_24" />
 
 </LinearLayout>
